@@ -82,7 +82,7 @@ class LoginScreen extends Component{
 
                  <View style={{paddingLeft:wp('20%')}}>
                  <Image
-                  style={{width:wp('40%'),height:wp('10%')}}
+                  style={{width:wp('50%'),height:wp('10%')}}
                   source={require('../../images/list.png')}
                 />
                  </View>

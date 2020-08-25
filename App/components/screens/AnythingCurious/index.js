@@ -194,6 +194,18 @@ class LoginScreen extends Component{
 
 
             </ScrollView>
+            <TouchableOpacity
+          activeOpacity={0.5}
+        // onPress={() => this.props.navigation.navigate('MyCart') } 
+          style={styles.TouchableOpacityStyle}>
+           
+               <View>
+                    <IconMore name="plus" size={35} color='#40bcf2'  /> 
+                </View>
+         
+        </TouchableOpacity>
+      
+
             </SafeAreaView>
             </LinearGradient>
       );

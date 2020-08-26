@@ -91,16 +91,15 @@ class SecondScreen extends Component{
       return (
           <View style={styles.thumbnail1} >
            
-          
-           <ImageBackground    style={{ width: wp('45%'), height: wp('30%'), borderRadius: 25 }} 
-             imageStyle={{ borderRadius: 10 }}source={{
-               uri: 'https://reactnative.dev/img/tiny_logo.png',
-              }}>
-                <View>
-                    <IconMore name="more-vertical" size={25} color='white' style={{fontWeight:'bold',marginLeft:wp('37%'),marginTop:wp('3%')}} /> 
-                </View>
-                    <Text style={styles.title}>{name}</Text>
-              </ImageBackground>
+           <View style={{padding:10}}>
+                 <Text>
+                  Place to go
+                </Text>
+                <Text style={{color:'#777'}}>
+                  Text comes here
+                </Text>
+           </View>
+               
          
             
            
@@ -115,7 +114,7 @@ class SecondScreen extends Component{
   
         return(
         
-            <LinearGradient colors={['#02a6cb', '#03b1c9','#42ccd6']} style={styles.linearGradient}>
+            <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
   <SafeAreaView style={{ flex: 1}}>
                 <ScrollView style={styles.container}>
                 <View>
@@ -132,7 +131,15 @@ class SecondScreen extends Component{
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                     <View>
-                          <IconBack name="logo-dropbox" size={25} color='white' onPress={()=>this.props.navigation.navigate('ForthScreen')} style={{fontWeight:'bold',marginLeft:wp('30%')}} /> 
+                      <TouchableOpacity   onPress={()=>this.props.navigation.navigate('ForthScreen')}>
+                      <Image
+                  
+                                style={{width:30,height:30,marginLeft:wp('30%')}}
+                                source={require('../../images/doublebox.png')}
+                              />
+                      </TouchableOpacity>
+                
+                          {/* <IconBack name="logo-dropbox" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('30%')}} />  */}
                       </View>
                       <View>
                       <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold'}} /> 

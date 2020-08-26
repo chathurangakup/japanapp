@@ -98,8 +98,8 @@ class SecondScreen extends Component{
             
            
              
-              <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black",fontWeight:'bold' }}>Product</Text>
-              <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black" }}>Product</Text>
+              <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black",fontWeight:'bold' }}>Place to go</Text>
+              <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black" }}>Texts comes here</Text>
            
             
              
@@ -109,7 +109,7 @@ class SecondScreen extends Component{
   
         return(
           <SafeAreaView style={{ flex: 1}}>
-            <LinearGradient colors={['#02a6cb', '#03b1c9','#42ccd6']} style={styles.linearGradient}>
+            <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
   
                 <ScrollView style={styles.container}>
                 <View>
@@ -126,7 +126,13 @@ class SecondScreen extends Component{
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                     <View>
-                          <IconBack name="logo-dropbox" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('30%')}} /> 
+                    <TouchableOpacity   onPress={()=>this.props.navigation.navigate('ThirdScreen')}>
+                      <Image
+                  
+                                style={{width:30,height:30,marginLeft:wp('30%')}}
+                                source={require('../../images/box4.png')}
+                              />
+                      </TouchableOpacity>
                       </View>
                       <View>
                       <IconMore name="more-vertical" size={25} color='white' style={{fontWeight:'bold'}} /> 

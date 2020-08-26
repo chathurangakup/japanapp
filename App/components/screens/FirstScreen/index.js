@@ -65,7 +65,7 @@ class LoginScreen extends Component{
       
      
         return(
-          <LinearGradient colors={['#02a6cb', '#03b1c9','#42ccd6']} style={styles.linearGradient}>
+          <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']} style={styles.linearGradient}>
   
     
 
@@ -80,11 +80,19 @@ class LoginScreen extends Component{
                 />
                  </View>
 
-                 <View style={{paddingLeft:wp('20%')}}>
-                 <Image
+                 <View style={{alignItems:'center'}}>
+                 {/* <Image
                   style={{width:wp('50%'),height:wp('10%')}}
                   source={require('../../images/list.png')}
-                />
+                /> */}
+                      <Text style={{fontSize:wp('6%'),color:'white',fontWeight:'bold'}}>Memo</Text>
+                      <View style={{ 
+    height: 0,               
+    width: 100,              // as much as you want to 'Stretch' the underline
+    borderTopColor: 'white', 
+    borderTopWidth: 3,      
+    marginTop: 10        
+}} />
                  </View>
 
                 {this.props.loading && <Loading navigation={this.props.navigation} animating={true} />}
@@ -108,7 +116,7 @@ class LoginScreen extends Component{
               
                 <View style={styles.body}>
                      <View style={{alignItems:'center'}}>
-                        <Buttons  text="Create new folder" btnfontSize={wp('4%')} btnbackgroundColor='#0EA8e0' btntxtncolor="#ffffff" btnMarginRight={imageWidth/12} btnMarginLeft={imageWidth/12} onPress={()=>this.btnPress()}/>
+                        <Buttons  text="Create new folder" btnfontSize={wp('4%')} btnbackgroundColor='#0EA8e0' btntxtncolor="#ffffff" btnMarginRight={imageWidth/12} btnMarginLeft={imageWidth/12}  onPress={()=>this.btnPress()}/>
                      </View>
                 </View>
 

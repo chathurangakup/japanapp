@@ -61,29 +61,29 @@ class SecondScreen extends Component{
       let titles = [{
         value: 'Veg Rice',
         lable:'rice',
-        thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/VEG FRIED RICE.jpg'
+        thumbnail_large:require('../../images/1.jpeg')
     }, {
         value: 'Vade',
         lable:'vade',
-        thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/MEDHU VADAI.jpg'
+        thumbnail_large:require('../../images/2.jpeg')
     },
     {
       value: 'Vade',
       lable:'vade',
-      thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/MEDHU VADAI.jpg'
+      thumbnail_large:require('../../images/3.jpeg')
   },{
     value: 'Vade',
     lable:'vade',
-    thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/MEDHU VADAI.jpg'
+    thumbnail_large:require('../../images/1.jpeg')
 },{
   value: 'Vade',
   lable:'vade',
-  thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/MEDHU VADAI.jpg'
+  thumbnail_large:require('../../images/2.jpeg')
 },
 {
   value: 'Vade',
   lable:'vade',
-  thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/MEDHU VADAI.jpg'
+  thumbnail_large:require('../../images/2.jpeg')
 }
 
   
@@ -99,12 +99,16 @@ class SecondScreen extends Component{
 
           
            <ImageBackground    style={{ width: wp('45%'), height: wp('30%'), borderRadius: 25 }} 
-             imageStyle={{ borderRadius: 10 }}source={{
-               uri: 'https://reactnative.dev/img/tiny_logo.png',
-              }}>
-                <View>
-                    <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('37%'),marginTop:wp('3%')}} /> 
+             imageStyle={{ borderRadius: 10 }}source={_url}>
+                <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                  <View style={{width:20,height:20,backgroundColor:'#777',borderRadius:10,margin:10,alignItems:'center'}}>
+                    <Text>1</Text>
+                  </View>
+                  <View>
+                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('2%'),marginTop:wp('3%')}} /> 
+                  </View>
                 </View>
+                 
                     <Text style={styles.title}>{name}</Text>
               </ImageBackground>
          
@@ -120,9 +124,9 @@ class SecondScreen extends Component{
     }
   
         return(
-          <SafeAreaView style={{ flex: 1}}>
-            <LinearGradient colors={['#02a6cb', '#03b1c9','#42ccd6']} style={styles.linearGradient}>
-  
+        
+            <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
+    <SafeAreaView style={{ flex: 1}}>
                 <ScrollView style={styles.container}>
                 <View>
 
@@ -133,11 +137,15 @@ class SecondScreen extends Component{
                 />
                  </View>
 
-                 <View style={{paddingLeft:wp('20%')}}>
-                 <Image
-                  style={{width:wp('40%'),height:wp('10%')}}
-                  source={require('../../images/list.png')}
-                />
+                 <View style={{alignItems:'center',paddingBottom:wp('10%')}}>
+                 <Text style={{fontSize:wp('6%'),color:'white',fontWeight:'bold'}}>Memo</Text>
+                      <View style={{ 
+    height: 0,               
+    width: 100,              // as much as you want to 'Stretch' the underline
+    borderTopColor: 'white', 
+    borderTopWidth: 3,      
+    marginTop: 10        
+}} />
                  </View>
 
 
@@ -169,9 +177,9 @@ class SecondScreen extends Component{
                 </View>
          
         </TouchableOpacity>
-      
+        </SafeAreaView>
 </LinearGradient>
-            </SafeAreaView>
+         
       );
       
        

@@ -67,7 +67,7 @@ class LoginScreen extends Component{
       
      
         return(
-          <LinearGradient colors={['#02a6cb', '#03b1c9','#42ccd6']} style={styles.linearGradient}>
+          <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
             <SafeAreaView style={{flex:1}}>
 
        
@@ -90,8 +90,12 @@ class LoginScreen extends Component{
                         
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
-                    <View>
-                          <IconBack name="logo-dropbox" size={25} color='white' onPress={()=>this.props.navigation.navigate('ForthScreen')} style={{fontWeight:'bold',marginLeft:wp('30%')}} /> 
+                        <View>
+                        <Image
+                                style={{width:30,height:30,marginLeft:wp('30%')}}
+                                source={require('../../images/doublebox.png')}
+                              />
+                        
                       </View>
                       <View>
                       <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold'}} /> 

@@ -13,10 +13,11 @@ export default EStyleSheet.create({
       },
       thumbnail1: {
             flex:1,
-            paddingBottom:wp('2%'),
-            paddingLeft:wp('1%'),
-            paddingRight:wp('1%'),
-            paddingTop:wp('2%'),
+           margin:5,
+           width:wp('20%'),
+           height:wp('30%'),
+            backgroundColor:'white',
+            borderRadius:10
       },
       thumbnail: {
         borderRadius: 10,

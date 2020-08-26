@@ -23,7 +23,8 @@ export default EStyleSheet.create({
       buttonText: {
          
         alignItems: 'center',
-       
+       paddingTop:9,
+       paddingBottom:9,
        
       
         textAlign:'center',

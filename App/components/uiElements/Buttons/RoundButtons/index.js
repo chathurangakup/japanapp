@@ -26,7 +26,7 @@ class RoundButtons extends Component{
      const color=btntxtncolor || '#ffffff'
      const backgroundColor=btnbackgroundColor || '#000000'
      const width=btnWidth || imageWidth/1.1;
-     const height=btnHight || 100;
+     const height=btnHight || 80;
      const marginLeft=btnMarginLeft || 20;
      const marginRight =btnMarginRight || 20;
      const borderColor=btnborderColor || '#ffffff'

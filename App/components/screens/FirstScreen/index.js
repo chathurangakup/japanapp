@@ -129,14 +129,14 @@ class LoginScreen extends Component{
  visible={this.state.Alert_Visibility}
  animationType="slide"
         transparent={true}
-
+      
 
 
 
  onRequestClose={ () => { this.Show_Custom_Alert(!this.state.Alert_Visibility)} } >
 
 
-   <View style={{ flex:1, alignItems: 'center', justifyContent: 'center' }}>
+   <View style={{ flex:1, alignItems: 'center', justifyContent: 'center',backgroundColor: 'rgba(0,0,0,0.5)', elevation: 20, }}>
 
 
        <View style={styles.Alert_Main_View}>

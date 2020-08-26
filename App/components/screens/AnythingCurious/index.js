@@ -75,7 +75,7 @@ class LoginScreen extends Component{
                 <ScrollView style={styles.container}>
                
                 <View>
-                <View style={{width: '100%', height: wp('100%')}}>
+                <View style={{width: '100%'}}>
                
              
 

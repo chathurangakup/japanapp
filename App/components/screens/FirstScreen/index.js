@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View, 
+import {View,
     Text,
     SafeAreaView,
     ScrollView,
@@ -37,40 +37,40 @@ class LoginScreen extends Component{
         this.state = {
           isActive:true,
           Alert_Visibility:false,
-        
-        
-          }; 
+
+
+          };
       }
-      
+
       btnPress=async()=>{
         this.setState({Alert_Visibility:true})
       }
 
 
 
-    
+
       Show_Custom_Alert=()=>{
         this.setState({Alert_Visibility:false})
-       
+
       }
       okPress=()=>{
        this.props.navigation.navigate('AnythingCurious')
        this.setState({Alert_Visibility:false})
       }
-    
-    
 
-  
+
+
+
     render(){
-      
-     
+
+
         return(
-          <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']} style={styles.linearGradient}>
-  
-    
+          <LinearGradient colors={['#40BCF2', '#0EA8E0','#6CCDDE']} style={styles.linearGradient}>
+
+
 
                 <ScrollView style={styles.container}>
-               
+
                 <View>
                 <View style={{width: '100%', height: wp('100%')}}>
                 <View style={{padding:20,marginTop:40}}>
@@ -86,12 +86,12 @@ class LoginScreen extends Component{
                   source={require('../../images/list.png')}
                 /> */}
                       <Text style={{fontSize:wp('6%'),color:'white',fontWeight:'bold'}}>Memo</Text>
-                      <View style={{ 
-    height: 0,               
+                      <View style={{
+    height: 0,
     width: 100,              // as much as you want to 'Stretch' the underline
-    borderTopColor: 'white', 
-    borderTopWidth: 3,      
-    marginTop: 10        
+    borderTopColor: 'white',
+    borderTopWidth: 3,
+    marginTop: 10
 }} />
                  </View>
 
@@ -111,9 +111,9 @@ class LoginScreen extends Component{
                          <Text style={{color:'#40bcf2'}}>Save the places where you want to go or what you want to eat!</Text>
                          <Text style={{color:'#40bcf2'}}>You can tore Pictures ,web and text in the memo</Text>
                     </View>
-                   
+
                  </View>
-              
+
                 <View style={styles.body}>
                      <View style={{alignItems:'center'}}>
                         <Buttons  text="Create new folder" btnfontSize={wp('4%')} btnbackgroundColor='#0EA8e0' btntxtncolor="#ffffff" btnMarginRight={imageWidth/12} btnMarginLeft={imageWidth/12}  onPress={()=>this.btnPress()}/>
@@ -125,7 +125,7 @@ class LoginScreen extends Component{
             </View>
 
             <Modal
- 
+
  visible={this.state.Alert_Visibility}
  animationType="slide"
         transparent={true}
@@ -144,16 +144,16 @@ class LoginScreen extends Component{
 
          <View style={{width:wp('70%')}}>
                    <TextInput
-                       
+
                         mode='outlined'
                         onChangeText={value => this.onChangeText('stateprovince',value)}
                         onFocus={()=> this.setState({hasFocusStateProvince:true})}
                         onBlur={()=> this.setState({hasFocusStateProvince:false})}
-                        style={this.state.hasFocusStateProvince ? styles.focusedTextInput:styles.txtstyle}  >   
+                        style={this.state.hasFocusStateProvince ? styles.focusedTextInput:styles.txtstyle}  >
                    </TextInput>
         </View>
-        
-                
+
+
 
            <View style={{flexDirection: 'row',}}>
                             <View style={{padding:50,marginRight:50}}>
@@ -168,7 +168,7 @@ class LoginScreen extends Component{
                                 </TouchableOpacity>
                             </View>
            </View>
-         
+
        </View>
 
    </View>
@@ -180,13 +180,13 @@ class LoginScreen extends Component{
 
 
             </ScrollView>
-         
+
             </LinearGradient>
       );
-      
-       
+
+
     }
-} 
+}
 
 
 

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View, 
+import {View,
     Text,
     SafeAreaView,
     ScrollView,
@@ -39,55 +39,55 @@ class LoginScreen extends Component{
         this.state = {
           isActive:true,
           Alert_Visibility:false,
-        
-        
-          }; 
+
+
+          };
       }
-      
+
       btnPress=async()=>{
           this.props.navigation.navigate('SecondScreen')
       }
 
 
 
-    
+
       Show_Custom_Alert=()=>{
         this.setState({Alert_Visibility:false})
-       
+
       }
       okPress=()=>{
        this.props.navigation.navigate('SecondScreen')
        this.setState({Alert_Visibility:false})
       }
-    
-    
 
-  
+
+
+
     render(){
-      
-     
+
+
         return(
-          <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
+          <LinearGradient colors={['#40BCF2', '#0EA8E0','#6CCDDE']}  style={styles.linearGradient}>
             <SafeAreaView style={{flex:1}}>
 
-       
-               
+
+
                 <ScrollView style={styles.container}>
-               
+
                 <View>
                 <View style={{width: '100%', height: wp('100%')}}>
-               
-             
+
+
 
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                     <View style={{flexDirection:'row',flex:1,justifyContent:'flex-start',padding:10}}>
                       <View >
-                          <IconBack name="arrow-back" size={25} color='white' onPress={()=>this.props.navigation.navigate('SecondScreen')} style={{fontWeight:'bold'}} /> 
+                          <IconBack name="arrow-back" size={25} color='white' onPress={()=>this.props.navigation.navigate('SecondScreen')} style={{fontWeight:'bold'}} />
                       </View>
                       <View style={{padding:5}}>
                           <Text style={{color:'white'}}>Folder Name</Text>
                       </View>
-                        
+
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                         <View>
@@ -95,16 +95,16 @@ class LoginScreen extends Component{
                                 style={{width:30,height:30,marginLeft:wp('30%')}}
                                 source={require('../../images/doublebox.png')}
                               />
-                        
+
                       </View>
                       <View>
-                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold'}} /> 
+                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold'}} />
                       </View>
-                        
+
                     </View>
                    </View>
-               
-           
+
+
 
                  {/* <View style={{paddingLeft:wp('20%')}}>
                  <Image
@@ -129,9 +129,9 @@ class LoginScreen extends Component{
                          <Text style={{color:'#40bcf2'}}>Save the places where you want to go or what you want to eat!</Text>
                          <Text style={{color:'#40bcf2'}}>You can tore Pictures ,web and text in the memo</Text>
                     </View>
-                   
+
                  </View>
-              
+
                 <View style={styles.body}>
                      <View style={{alignItems:'center'}}>
                         <Buttons  text="Create Memo" btnfontSize={wp('4%')} btnbackgroundColor='#0EA8e0' btntxtncolor="#ffffff" btnMarginRight={imageWidth/12} btnMarginLeft={imageWidth/12} onPress={()=>this.btnPress()}/>
@@ -143,7 +143,7 @@ class LoginScreen extends Component{
             </View>
 
             <Modal
- 
+
  visible={this.state.Alert_Visibility}
  animationType="slide"
         transparent={true}
@@ -162,16 +162,16 @@ class LoginScreen extends Component{
 
          <View style={{width:wp('70%')}}>
                    <TextInput
-                       
+
                         mode='outlined'
                         onChangeText={value => this.onChangeText('stateprovince',value)}
                         onFocus={()=> this.setState({hasFocusStateProvince:true})}
                         onBlur={()=> this.setState({hasFocusStateProvince:false})}
-                        style={this.state.hasFocusStateProvince ? styles.focusedTextInput:styles.txtstyle}  >   
+                        style={this.state.hasFocusStateProvince ? styles.focusedTextInput:styles.txtstyle}  >
                    </TextInput>
         </View>
-        
-                
+
+
 
            <View style={{flexDirection: 'row',}}>
                             <View style={{padding:50,marginRight:50}}>
@@ -186,7 +186,7 @@ class LoginScreen extends Component{
                                 </TouchableOpacity>
                             </View>
            </View>
-         
+
        </View>
 
    </View>
@@ -200,23 +200,23 @@ class LoginScreen extends Component{
             </ScrollView>
             <TouchableOpacity
           activeOpacity={0.5}
-        // onPress={() => this.props.navigation.navigate('MyCart') } 
+        // onPress={() => this.props.navigation.navigate('MyCart') }
           style={styles.TouchableOpacityStyle}>
-           
+
                <View>
-                    <IconMore name="plus" size={35} color='#40bcf2'  /> 
+                    <IconMore name="plus" size={35} color='#40bcf2'  />
                 </View>
-         
+
         </TouchableOpacity>
-      
+
 
             </SafeAreaView>
             </LinearGradient>
       );
-      
-       
+
+
     }
-} 
+}
 
 
 

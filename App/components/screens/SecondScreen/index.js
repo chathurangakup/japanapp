@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View, 
+import {View,
     Text,
     SafeAreaView,
     ScrollView,
@@ -32,30 +32,30 @@ class SecondScreen extends Component{
         this.state = {
           isActive:true,
           Alert_Visibility:false,
-        
-        
-          }; 
+
+
+          };
       }
-      
+
       btnPress=async()=>{
         this.setState({Alert_Visibility:true})
       }
 
 
 
-    
+
       Show_Custom_Alert=()=>{
         this.setState({Alert_Visibility:false})
-       
+
       }
-    
+
 
       goVedio=()=>{
        this.props.navigation.navigate('ThirdScreen')
       }
-    
 
-  
+
+
     render(){
 
       let titles = [{
@@ -86,46 +86,46 @@ class SecondScreen extends Component{
   thumbnail_large:require('../../images/2.jpeg')
 }
 
-  
-  
+
+
   ];
-  
+
     function Item({ name, _url,onPress,description }) {
       return (
           <View style={styles.thumbnail1} >
-           
+
            <TouchableOpacity  onPress={onPress}>
 
 
-          
-           <ImageBackground    style={{ width: wp('45%'), height: wp('30%'), borderRadius: 25 }} 
+
+           <ImageBackground    style={{ width: wp('45%'), height: wp('30%'), borderRadius: 25 }}
              imageStyle={{ borderRadius: 10 }}source={_url}>
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                   <View style={{width:20,height:20,backgroundColor:'#777',borderRadius:10,margin:10,alignItems:'center'}}>
                     <Text>1</Text>
                   </View>
                   <View>
-                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('2%'),marginTop:wp('3%')}} /> 
+                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('2%'),marginTop:wp('3%')}} />
                   </View>
                 </View>
-                 
+
                     <Text style={styles.title}>{name}</Text>
               </ImageBackground>
-         
-            
-           
-             
+
+
+
+
               {/* <Text style={{ fontSize: 15, marginHorizontal: 30, color: "blue" }}>Product</Text> */}
-           
+
               </TouchableOpacity>
-             
+
           </View>
       );
     }
-  
+
         return(
-        
-            <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
+
+            <LinearGradient colors={['#40BCF2', '#0EA8E0','#6CCDDE']}  style={styles.linearGradient}>
     <SafeAreaView style={{ flex: 1}}>
                 <ScrollView style={styles.container}>
                 <View>
@@ -139,12 +139,12 @@ class SecondScreen extends Component{
 
                  <View style={{alignItems:'center',paddingBottom:wp('10%')}}>
                  <Text style={{fontSize:wp('6%'),color:'white',fontWeight:'bold'}}>Memo</Text>
-                      <View style={{ 
-    height: 0,               
+                      <View style={{
+    height: 0,
     width: 100,              // as much as you want to 'Stretch' the underline
-    borderTopColor: 'white', 
-    borderTopWidth: 3,      
-    marginTop: 10        
+    borderTopColor: 'white',
+    borderTopWidth: 3,
+    marginTop: 10
 }} />
                  </View>
 
@@ -154,10 +154,10 @@ class SecondScreen extends Component{
                         <FlatList
                               data={titles}
                               renderItem={({ item }) =>
-                                <Item 
+                                <Item
                                       description={item.lable}
                                       name={item.value}
-                                      _url={item.thumbnail_large} 
+                                      _url={item.thumbnail_large}
                                       onPress={()=>this.goVedio(item.id)} />}
                                       keyExtractor={item => item.id}
                                       numColumns={2}
@@ -166,25 +166,25 @@ class SecondScreen extends Component{
                   </View>
                </View>
             </ScrollView>
-            
+
   <TouchableOpacity
           activeOpacity={0.5}
-        // onPress={() => this.props.navigation.navigate('MyCart') } 
+        // onPress={() => this.props.navigation.navigate('MyCart') }
           style={styles.TouchableOpacityStyle}>
-           
+
                <View>
-                    <IconMore name="plus" size={35} color='#40bcf2'  /> 
+                    <IconMore name="plus" size={35} color='#40bcf2'  />
                 </View>
-         
+
         </TouchableOpacity>
         </SafeAreaView>
 </LinearGradient>
-         
+
       );
-      
-       
+
+
     }
-} 
+}
 
 
 

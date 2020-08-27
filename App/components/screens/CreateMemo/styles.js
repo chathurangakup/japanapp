@@ -7,18 +7,18 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp, listenOrientation
 
 export default EStyleSheet.create({
     container:{
-      
-       
+
+
       },
     header:{
-       
+
         height:imageWidth/3,
         flexDirection:'row',
         justifyContent: 'center',
         paddingTop:15
-       
+
       },
-      
+
       avatar: {
         width: 100,
         height: 100,
@@ -28,36 +28,36 @@ export default EStyleSheet.create({
         marginTop:-70,
         alignSelf:'center',
         position: 'absolute',
-       
+
       },
       bodycontainer:{
         borderRadius: 10,
         borderWidth: 1,
         borderColor: "white",
- 
+
         marginRight:wp('5%'),
         marginLeft:wp('5%'),
         marginTop:wp('20%'),
         backgroundColor:'white',
-       
+
       },
       name:{
         fontSize:22,
         color:'#000000',
-       
+
         fontWeight:'600',
       },
       body:{
         marginTop:0,
-    
-       
+
+
        // borderColor: "white",
-       
+
       },
       bodyContent: {
         flex: 1,
         alignItems: 'center',
-        
+
         padding:"40rem",
       },
       name:{
@@ -105,10 +105,10 @@ export default EStyleSheet.create({
         paddingTop:"35rem"
       },
       Alert_Main_View:{
- 
+
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor : "#fff", 
+        backgroundColor : "#fff",
         height: hp('20%') ,
         paddingTop:40,
         width: wp('90%'),
@@ -116,44 +116,44 @@ export default EStyleSheet.create({
         borderColor: '#fff',
         borderRadius:7,
       },
-       
+
       Alert_Title:{
-        fontSize: 25, 
+        fontSize: 25,
         color: "#000",
         textAlign: 'center',
         padding: 5,
       },
-       
+
       Alert_Message:{
-          fontSize: 22, 
+          fontSize: 22,
           color: "#000",
           textAlign: 'center',
           padding: 10,
           height: '80%'
         },
         txtstyle:{
-       
+
             height:wp('10%'),
             fontSize:wp('4%'),
-       
-          
+
+
             justifyContent:'center',
             backgroundColor:'#ffffff',
             borderBottomWidth:1,
             borderColor:'#777777',
-           
+
           },
          focusedTextInput:{
-       
+
           height:wp('10%'),
             fontSize:wp('4%'),
-        
+
           justifyContent:'center',
           backgroundColor:'#ffffff',
-        
+
           borderBottomWidth:1,
           borderColor:'#20366B',
-         
+
          },
          linearGradient: {
           flex: 1,
@@ -162,32 +162,32 @@ export default EStyleSheet.create({
           borderRadius: 5
         },
         TouchableOpacityStyle: {
-          borderWidth:1,
+          borderWidth:0,
           borderColor:'rgba(0,0,0,0.2)',
           alignItems:'center',
           justifyContent:'center',
-          width:90,
-          position: 'absolute',                                          
-          bottom:wp('15%'),                                                    
+          width:'30%',
+          position: 'absolute',
+          bottom:wp('15%'),
           right: wp('50%'),
           height:70,
           backgroundColor:'#fff',
-        
-        
+
+
         },
         TouchableOpacityStyle1: {
-          borderWidth:1,
+          borderWidth:0,
           borderColor:'rgba(0,0,0,0.2)',
           alignItems:'center',
           justifyContent:'center',
-          width:90,
-          position: 'absolute',                                          
-          bottom:wp('15%'),                                                    
+          width:'30%',
+          position: 'absolute',
+          bottom:wp('15%'),
           right: wp('20%'),
           height:70,
           backgroundColor:'#fff',
-        
-        
+
+
         },
-     
+
 });

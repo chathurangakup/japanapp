@@ -150,11 +150,12 @@ class SecondScreen extends Component{
                         <FlatList
                               data={titles}
                               renderItem={({ item }) =>
-                                <Item 
-                                      description={item.lable}
-                                      name={item.value}
-                                      _url={item.thumbnail_large} 
-                                      onPress={()=>this.goVedio(item.id)} />}
+                              <View style={styles.thumbnail1} >
+  
+                              <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black",fontWeight:'bold' }}>Place to go</Text>
+                              <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black" }}>Texts comes here</Text>
+                          </View>
+                                    }
                                       keyExtractor={item => item.id}
                                       numColumns={1}
                                 />

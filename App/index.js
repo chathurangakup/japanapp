@@ -9,7 +9,7 @@ import {
 import { View,Text} from 'react-native';
 
 
-//  import Home_Resturant from './components/screens/Home_Resturant/TrackAndOrderReservation';
+ import Home_Resturant from './components/screens/CreateMemoWithData';
  import Navigators from './components/navigators/Appnavigators';
 
  import FirstScreen from '././components/screens/ForthScreen';

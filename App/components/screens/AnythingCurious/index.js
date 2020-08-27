@@ -45,7 +45,7 @@ class LoginScreen extends Component{
       }
       
       btnPress=async()=>{
-          this.props.navigation.navigate('SecondScreen')
+          this.props.navigation.navigate('CreateMemo')
       }
 
 
@@ -91,10 +91,13 @@ class LoginScreen extends Component{
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                         <View>
-                        <Image
+                          <TouchableOpacity onPress={()=>this.props.navigation.navigate('SecondScreen')}>
+                          <Image
                                 style={{width:30,height:30,marginLeft:wp('30%')}}
                                 source={require('../../images/doublebox.png')}
                               />
+                          </TouchableOpacity>
+                      
                         
                       </View>
                       <View>

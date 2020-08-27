@@ -17,7 +17,10 @@ export default EStyleSheet.create({
            width:wp('20%'),
            height:wp('30%'),
             backgroundColor:'white',
-            borderRadius:10
+            borderRadius:10,
+            
+  
+
       },
       thumbnail: {
         borderRadius: 10,

@@ -109,7 +109,7 @@ export default EStyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor : "#fff", 
-        height: hp('20%') ,
+      
         paddingTop:40,
         width: wp('90%'),
         borderWidth: 1,

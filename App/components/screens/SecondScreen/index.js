@@ -98,7 +98,11 @@ class SecondScreen extends Component{
 
 
 
-           <ImageBackground    style={{ width: wp('45%'), height: wp('30%'), borderRadius: 25 }}
+
+           <ImageBackground    style={{ width: wp('45%'), height: wp('30%'), borderRadius: 10,
+
+    opacity: 0.6,
+    backgroundColor: 'black', }}
              imageStyle={{ borderRadius: 10 }}source={_url}>
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                   <View style={{width:20,height:20,backgroundColor:'#777',borderRadius:10,margin:10,alignItems:'center'}}>

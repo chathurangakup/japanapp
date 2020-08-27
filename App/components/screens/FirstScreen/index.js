@@ -72,8 +72,8 @@ class LoginScreen extends Component{
                 <ScrollView style={styles.container}>
 
                 <View>
-                <View style={{width: '100%', height: wp('100%')}}>
-                <View style={{padding:20,marginTop:40}}>
+                <View style={{width: '100%'}}>
+                <View style={{padding:20}}>
                  <Image
                   style={{width:wp('10%'),height:wp('10%')}}
                   source={require('../../images/drawer.png')}
@@ -129,14 +129,14 @@ class LoginScreen extends Component{
  visible={this.state.Alert_Visibility}
  animationType="slide"
         transparent={true}
-
+      
 
 
 
  onRequestClose={ () => { this.Show_Custom_Alert(!this.state.Alert_Visibility)} } >
 
 
-   <View style={{ flex:1, alignItems: 'center', justifyContent: 'center' }}>
+   <View style={{ flex:1, alignItems: 'center', justifyContent: 'center',backgroundColor: 'rgba(0,0,0,0.5)', elevation: 20, }}>
 
 
        <View style={styles.Alert_Main_View}>
@@ -163,7 +163,7 @@ class LoginScreen extends Component{
                             </View>
 
                             <View  >
-                                <TouchableOpacity onPress={()=>this.okPress()} style={{marginTop:45,marginBottom:45,paddingLeft:50,paddingRight:50,paddingTop:10,paddingBottom:10,backgroundColor:'#0EA8e0',justifyContent:'center',borderRadius:5}}>
+                                <TouchableOpacity onPress={()=>this.okPress()} style={{marginTop:45,marginBottom:45,paddingLeft:40,paddingRight:40,paddingTop:10,paddingBottom:10,backgroundColor:'#0EA8e0',justifyContent:'center',borderRadius:5}}>
                                     <Text style={{color:'white'}}>Create</Text>
                                 </TouchableOpacity>
                             </View>

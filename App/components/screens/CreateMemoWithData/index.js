@@ -176,7 +176,7 @@ class LoginScreen extends Component{
                               data={titles}
                              
                               renderItem={({ item }) =>
-                                  <View style={{flexDirection:'row',justifyContent:'space-between',borderWidth:0.3,margin:10,borderRadius:5}}>
+                                  <View style={{flexDirection:'row',justifyContent:'space-between',borderWidth:0.25,margin:10,borderRadius:5,borderColor:'#000'}}>
                                     <View style={{flexDirection:'row'}}>
                                         <View >
                                             <Image
@@ -224,12 +224,20 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
        >
            
-           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:5,marginTop:1,borderColor:'#777',borderWidth:0,alignItems:'center',marginRight:8,marginLeft:8,marginBottom:10, shadowRadius: 3.84,
+           backgroundColor:'#fff',
+          shadowColor: "#000000",
+          shadowOpacity: 0.5,
+          shadowRadius: 3,
+          shadowOffset: {
+            height: 0,
+            width: 0
+          }}}>
                <Image
                       style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/image.png')}
                     />
-                     <Text>Add Image</Text>
+                     <Text style={{fontSize:wp('3%'),paddingTop:2}}>Add Image</Text>
                 </View>
                
          
@@ -242,12 +250,20 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
            
-           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:5,marginTop:1,borderColor:'#777',borderWidth:0,alignItems:'center',marginRight:8,marginBottom:5, shadowRadius: 3.84,
+           backgroundColor:'#fff',
+          shadowColor: "#000000",
+          shadowOpacity: 0.5,
+          shadowRadius: 3,
+          shadowOffset: {
+            height: 0,
+            width: 0
+          }}}>
                <Image
                       style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/photo.png')}
                     />
-                      <Text>Take Photo</Text>
+                      <Text style={{fontSize:wp('3%'),paddingTop:2}}>Take Photo</Text>
                 </View>
          
         </TouchableOpacity>
@@ -257,12 +273,20 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
            
-           <View style={{paddingLeft:10,paddingRight:10,paddingTop:5,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:5,marginTop:1,borderColor:'#777',borderWidth:0,alignItems:'center',marginRight:8,marginBottom:5, shadowRadius: 3.84,
+           backgroundColor:'#fff',
+          shadowColor: "#000000",
+          shadowOpacity: 0.5,
+          shadowRadius: 3,
+          shadowOffset: {
+            height: 0,
+            width: 0
+          }}}>
                <Image
-                      style={{width:wp('5.5%'),height:wp('7%')}}
+                      style={{width:wp('4.5%'),height:wp('6%')}}
                       source={require('../../images/copy.png')}
                     />
-                    <Text>Copy Memo</Text>
+                    <Text style={{fontSize:wp('3%'),paddingTop:2}}>Copy Memo</Text>
                 </View>
          
         </TouchableOpacity>
@@ -272,12 +296,20 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
            
-           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
+           <View style={{paddingLeft:10,paddingRight:10,paddigTop:5,marginTop:1,marginRight:0,paddingBottom:4,alignItems:'center',backgroundColor:'#fff', 
+           shadowRadius: 3.84,
+          shadowColor: "#000000",
+          shadowOpacity: 0.5,
+          shadowRadius: 2,
+          shadowOffset: {
+            height: 0,
+            width: 0
+          }}}>
                <Image
-                      style={{width:wp('8%'),height:wp('6%')}}
+                      style={{width:wp('7%'),height:wp('5%'),marginTop:5}}
                       source={require('../../images/delete.png')}
                     />
-                     <Text>Delete Memo</Text>
+                     <Text style={{fontSize:wp('3%'),paddingTop:2}}>Delete Memo</Text>
                 </View>
          
         </TouchableOpacity>

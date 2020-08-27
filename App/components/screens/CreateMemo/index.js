@@ -145,9 +145,9 @@ class LoginScreen extends Component{
            <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
                       style={{width:wp('8%'),height:wp('6%')}}
-                      source={require('../../images/photo.png')}
+                      source={require('../../images/image.png')}
                     />
-                      <Text style={{fontSize:wp('3%'),paddingTop:4}}>Take Photo</Text>
+                      <Text style={{fontSize:wp('3%'),paddingTop:4}}>Add Image</Text>
                 </View>
          
         </TouchableOpacity>
@@ -160,9 +160,9 @@ class LoginScreen extends Component{
            <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
                       style={{width:wp('8%'),height:wp('6%')}}
-                      source={require('../../images/image.png')}
+                      source={require('../../images/photo.png')}
                     />
-                     <Text style={{fontSize:wp('3%'),paddingTop:4}}>Add Image</Text>
+                     <Text style={{fontSize:wp('3%'),paddingTop:4}}>Take Photo</Text>
                 </View>
                
          

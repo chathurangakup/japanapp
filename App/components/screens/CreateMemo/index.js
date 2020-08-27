@@ -114,9 +114,17 @@ class LoginScreen extends Component{
 
                 {this.props.loading && <Loading navigation={this.props.navigation} animating={true} />}
                 <View >
-                  <Text style={{color:'#777',padding:10,fontSize:wp('5%')}}>Title</Text>
+                  <TextInput 
+                  style={{color:'#777',padding:10,fontSize:wp('5%')}}
+                  placeholder="Title"
+                  ></TextInput>
                
-                  <Text style={{color:'#777',padding:10}}>Memo</Text>
+               <TextInput 
+                  style={{color:'#777',padding:10,fontSize:wp('4%')}}
+                  placeholder="Memo"
+                  ></TextInput>
+               
+               
               
 
             </View>
@@ -134,11 +142,12 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
           style={styles.TouchableOpacityStyle}>
            
-               <View>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
-                      style={{width:wp('30%'),height:wp('28%')}}
+                      style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/photo.png')}
                     />
+                      <Text style={{fontSize:wp('3%'),paddingTop:4}}>Take Photo</Text>
                 </View>
          
         </TouchableOpacity>
@@ -148,12 +157,14 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
           style={styles.TouchableOpacityStyle1}>
            
-               <View>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
-                      style={{width:wp('30%'),height:wp('28%')}}
+                      style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/image.png')}
                     />
+                     <Text style={{fontSize:wp('3%'),paddingTop:4}}>Add Image</Text>
                 </View>
+               
          
         </TouchableOpacity>
       

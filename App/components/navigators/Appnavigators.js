@@ -21,6 +21,7 @@ import ForthScreen from '../screens/ForthScreen';
 import AnythingCurious from '../screens/AnythingCurious';
 import CreateMemo from '../screens/CreateMemo';
 import CreateMemoWithData from '../screens/CreateMemoWithData';
+import FullScreenImg from '../screens/FullScreenImg';
 
 
 
@@ -84,6 +85,15 @@ AnythingCurious: {
   }, 
   CreateMemoWithData: {
     screen: CreateMemoWithData,
+    navigationOptions:{
+        header:()=> null,
+    },
+    navigatorStyle: {
+        navBarHidden: true
+    }
+  }, 
+  FullScreenImg: {
+    screen: FullScreenImg,
     navigationOptions:{
         header:()=> null,
     },

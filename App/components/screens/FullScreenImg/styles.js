@@ -159,7 +159,7 @@ export default EStyleSheet.create({
           flex: 1,
           paddingLeft: 15,
           paddingRight: 15,
-          borderRadius: 5
+          
         },
         TouchableOpacityStyle: {
           borderWidth:1,

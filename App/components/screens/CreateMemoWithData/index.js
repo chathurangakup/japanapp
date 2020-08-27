@@ -145,10 +145,13 @@ class LoginScreen extends Component{
                               horizontal={true}
                               renderItem={({ item }) =>
                                   <View >
+                                    <TouchableOpacity onPress={()=>this.props.navigation.navigate('FullScreenImg')}>
                                     <Image
                                         style={{width:wp('50%'),height:wp('35%')}}
                                         source={item.thumbnail_large}
                                       />
+                                    </TouchableOpacity>
+                                  
                                   </View>
                                     
                                     }
@@ -221,12 +224,14 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
        >
            
-               <View>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
-                      style={{width:wp('30%'),height:wp('28%')}}
+                      style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/image.png')}
                     />
+                     <Text>Add Image</Text>
                 </View>
+               
          
         </TouchableOpacity>
              </View>
@@ -237,11 +242,12 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
            
-               <View>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
-                      style={{width:wp('30%'),height:wp('28%')}}
+                      style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/photo.png')}
                     />
+                      <Text>Take Photo</Text>
                 </View>
          
         </TouchableOpacity>
@@ -251,11 +257,12 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
            
-               <View>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:5,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
-                      style={{width:wp('30%'),height:wp('28%')}}
+                      style={{width:wp('5.5%'),height:wp('7%')}}
                       source={require('../../images/copy.png')}
                     />
+                    <Text>Copy Memo</Text>
                 </View>
          
         </TouchableOpacity>
@@ -265,11 +272,12 @@ class LoginScreen extends Component{
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
            
-               <View>
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,borderColor:'#777',borderWidth:0.3,alignItems:'center',marginRight:5,marginBottom:5}}>
                <Image
-                      style={{width:wp('30%'),height:wp('28%')}}
+                      style={{width:wp('8%'),height:wp('6%')}}
                       source={require('../../images/delete.png')}
                     />
+                     <Text>Delete Memo</Text>
                 </View>
          
         </TouchableOpacity>

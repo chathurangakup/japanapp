@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {View, 
+import {View,
     Text,
     SafeAreaView,
     ScrollView,
@@ -34,21 +34,19 @@ class SecondScreen extends Component{
           isActive:true,
           Alert_Visibility:false,
           changelist:false
-        
-        
-          }; 
+          };
       }
-      
+
       btnPress=async()=>{
         this.setState({Alert_Visibility:true})
       }
 
 
 
-    
+
       Show_Custom_Alert=()=>{
         this.setState({Alert_Visibility:false})
-       
+
       }
 
       pressbox=()=>{
@@ -58,12 +56,8 @@ class SecondScreen extends Component{
         }else{
           this.setState({changelist:false})
         }
-       
-      }
-    
-    
 
-  
+      }
     render(){
 
       let titles = [{
@@ -94,14 +88,13 @@ class SecondScreen extends Component{
   thumbnail_large:'https://demo-restaurant.tk/storage/cuisines/MEDHU VADAI.jpg'
 }
 
-  
-  
+
+
   ];
-  
+
     function Item({ name, _url,onPress,description }) {
       return (
           <View style={styles.thumbnail} >
-           
            <View style={{padding:10}}>
                  <Text>
                   Place to go
@@ -110,22 +103,22 @@ class SecondScreen extends Component{
                   Text comes here
                 </Text>
            </View>
-               
-         
-            
-           
-             
+
+
+
+
+
               {/* <Text style={{ fontSize: 15, marginHorizontal: 30, color: "blue" }}>Product</Text> */}
-           
-            
-             
+
+
+
           </View>
       );
     }
-  
+
         return(
-        
-            <LinearGradient colors={['#0ea8e0', '#1caade','#6ccdde']}  style={styles.linearGradient}>
+
+            <LinearGradient colors={['#40BCF2', '#0EA8E0','#6CCDDE']}  style={styles.linearGradient}>
   <SafeAreaView style={{ flex: 1}}>
                 <ScrollView style={styles.container}>
                 <View>
@@ -133,12 +126,12 @@ class SecondScreen extends Component{
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                     <View style={{flexDirection:'row',flex:1,justifyContent:'flex-start',padding:10}}>
                       <View >
-                          <IconBack name="arrow-back" size={25} color='white' onPress={()=>this.props.navigation.navigate('SecondScreen')} style={{fontWeight:'bold'}} /> 
+                          <IconBack name="arrow-back" size={25} color='white' onPress={()=>this.props.navigation.navigate('SecondScreen')} style={{fontWeight:'bold'}} />
                       </View>
                       <View style={{padding:5}}>
                       <Text style={{color:'white'}}>Folder name</Text>
                       </View>
-                        
+
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                     <View>
@@ -146,9 +139,9 @@ class SecondScreen extends Component{
                     {this.state.changelist==false ?
 
                       <TouchableOpacity   onPress={()=>this.pressbox()}>
-                       
+
                          <Image
-                  
+
                          style={{width:30,height:30,marginLeft:wp('30%')}}
                          source={require('../../images/doublebox.png')}
                        />
@@ -156,27 +149,24 @@ class SecondScreen extends Component{
                        :
                        <TouchableOpacity   onPress={()=>this.pressbox()}>
                        <Image
-                  
+
                        style={{width:30,height:30,marginLeft:wp('30%')}}
                        source={require('../../images/box4.png')}
                      />
  </TouchableOpacity>
 
                         }
-                     
-                     
-                
                           {/* <IconBack name="logo-dropbox" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('30%')}} />  */}
                       </View>
                       <View>
-                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold'}} /> 
+                      <IconMore name="more-vertical" size={25} color='white'  style={{fontWeight:'bold'}} />
                       </View>
-                        
+
                     </View>
-               
+
                  </View>
 
-               
+
 
 
                   <View style={{width: '100%'}}>
@@ -186,15 +176,15 @@ class SecondScreen extends Component{
                         <FlatList
                               data={titles}
                               renderItem={({ item }) =>
-                                <Item 
+                                <Item
                                       description={item.lable}
                                       name={item.value}
-                                      _url={item.thumbnail_large} 
+                                      _url={item.thumbnail_large}
                                       onPress={()=>this.goVedio(item.id)} />}
                                       keyExtractor={item => item.id}
                                       numColumns={2}
                                       key={(this.state.changelist ? true : false)}
-                                /> 
+                                />
 
                      </View>
                      :
@@ -212,33 +202,33 @@ class SecondScreen extends Component{
                                 />
                      </View>
 
-                     
+
                     }
-                        
+
 
                      </View>
                   </View>
                </View>
             </ScrollView>
-            
+
   <TouchableOpacity
           activeOpacity={0.5}
-        // onPress={() => this.props.navigation.navigate('MyCart') } 
+        // onPress={() => this.props.navigation.navigate('MyCart') }
           style={styles.TouchableOpacityStyle}>
-           
+
                <View>
-               <IconMore name="plus" size={35} color='#40bcf2'  /> 
+               <IconMore name="plus" size={35} color='#40bcf2'  />
                 </View>
-         
+
         </TouchableOpacity>
         </SafeAreaView>
 </LinearGradient>
-            
+
       );
-      
-       
+
+
     }
-} 
+}
 
 
 

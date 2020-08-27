@@ -172,12 +172,21 @@ export default EStyleSheet.create({
           right: wp('50%'),
           height:70,
           backgroundColor:'#fff',
+          elevation: 5,
+          shadowRadius: 3.84,
+          shadowColor: "#000000",
+          shadowOpacity: 0.3,
+          shadowRadius: 1,
+          shadowOffset: {
+            height:1,
+            width: 0
+          }
 
 
         },
+
         TouchableOpacityStyle1: {
           borderWidth:0,
-          borderColor:'rgba(0,0,0,0.2)',
           alignItems:'center',
           justifyContent:'center',
           width:'30%',
@@ -186,8 +195,15 @@ export default EStyleSheet.create({
           right: wp('20%'),
           height:70,
           backgroundColor:'#fff',
-
-
+          elevation: 5,
+          shadowRadius: 3.84,
+          shadowColor: "#000000",
+          shadowOpacity: 0.3,
+          shadowRadius: 1,
+          shadowOffset: {
+            height: 1,
+            width: 0
+          }
         },
 
 });

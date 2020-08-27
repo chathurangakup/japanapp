@@ -82,7 +82,7 @@ class LoginScreen extends Component{
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                     <View style={{flexDirection:'row',flex:1,justifyContent:'flex-start',padding:10}}>
                       <View >
-                      <IconBack name="arrow-back" size={25} color='white' onPress={()=>this.props.navigation.navigate('CreateMemoWithData')} style={{fontWeight:'bold'}} /> 
+                      <IconDelete name="close" size={25} color='white' onPress={()=>this.props.navigation.navigate('CreateMemoWithData')} style={{fontWeight:'bold'}} /> 
                       </View>
                      
                         
@@ -90,6 +90,7 @@ class LoginScreen extends Component{
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                       
                       <View    style={{width:30,height:30,marginLeft:wp('30%')}}>
+                   
                       <IconDelete name="delete" size={25} color='white' onPress={()=>this.props.navigation.navigate('CreateMemoWithData')} style={{fontWeight:'bold'}} /> 
                          
                       </View>

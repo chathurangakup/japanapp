@@ -137,6 +137,36 @@ class LoginScreen extends Component{
 
 
             </ScrollView>
+            <TouchableOpacity
+          activeOpacity={0.5}
+        // onPress={() => this.props.navigation.navigate('MyCart') }
+          style={styles.TouchableOpacityStyle}>
+
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,alignItems:'center',marginRight:5,marginBottom:5}}>
+               <Image
+                      style={{width:wp('8%'),height:wp('6%')}}
+                      source={require('../../images/image.png')}
+                    />
+                      <Text style={{fontSize:wp('3%'),paddingTop:4}}>Add Image</Text>
+                </View>
+
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          activeOpacity={0.5}
+        // onPress={() => this.props.navigation.navigate('MyCart') }
+          style={styles.TouchableOpacityStyle1}>
+
+           <View style={{paddingLeft:10,paddingRight:10,paddingTop:10,alignItems:'center',marginRight:5,marginBottom:5}}>
+               <Image
+                      style={{width:wp('8%'),height:wp('6%')}}
+                      source={require('../../images/photo.png')}
+                    />
+                     <Text style={{fontSize:wp('3%'),paddingTop:4}}>Take Photo</Text>
+                </View>
+
+
+        </TouchableOpacity>
 
                 <TouchableOpacity
                     activeOpacity={0.5}

@@ -19,6 +19,8 @@ import SecondScreen from '../screens/SecondScreen';
 import ThirdScreen from '../screens/ThirdScreen';
 import ForthScreen from '../screens/ForthScreen';
 import AnythingCurious from '../screens/AnythingCurious';
+import CreateMemo from '../screens/CreateMemo';
+import CreateMemoWithData from '../screens/CreateMemoWithData';
 
 
 
@@ -64,6 +66,24 @@ ForthScreen: {
 }, 
 AnythingCurious: {
     screen: AnythingCurious,
+    navigationOptions:{
+        header:()=> null,
+    },
+    navigatorStyle: {
+        navBarHidden: true
+    }
+  }, 
+  CreateMemo: {
+    screen: CreateMemo,
+    navigationOptions:{
+        header:()=> null,
+    },
+    navigatorStyle: {
+        navBarHidden: true
+    }
+  }, 
+  CreateMemoWithData: {
+    screen: CreateMemoWithData,
     navigationOptions:{
         header:()=> null,
     },

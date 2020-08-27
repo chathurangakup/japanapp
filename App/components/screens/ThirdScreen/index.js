@@ -33,8 +33,7 @@ class SecondScreen extends Component{
         this.state = {
           isActive:true,
           Alert_Visibility:false,
-
-
+          changelist:false
           };
       }
 
@@ -50,9 +49,15 @@ class SecondScreen extends Component{
 
       }
 
+      pressbox=()=>{
+       console.log(this.state.changelist)
+        if(this.state.changelist==false){
+          this.setState({changelist:true})
+        }else{
+          this.setState({changelist:false})
+        }
 
-
-
+      }
     render(){
 
       let titles = [{
@@ -89,8 +94,7 @@ class SecondScreen extends Component{
 
     function Item({ name, _url,onPress,description }) {
       return (
-          <View style={styles.thumbnail1} >
-
+          <View style={styles.thumbnail} >
            <View style={{padding:10}}>
                  <Text>
                   Place to go
@@ -131,14 +135,27 @@ class SecondScreen extends Component{
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                     <View>
-                      <TouchableOpacity   onPress={()=>this.props.navigation.navigate('ForthScreen')}>
-                      <Image
 
-                                style={{width:30,height:30,marginLeft:wp('30%')}}
-                                source={require('../../images/doublebox.png')}
-                              />
-                      </TouchableOpacity>
+                    {this.state.changelist==false ?
 
+                      <TouchableOpacity   onPress={()=>this.pressbox()}>
+
+                         <Image
+
+                         style={{width:30,height:30,marginLeft:wp('30%')}}
+                         source={require('../../images/doublebox.png')}
+                       />
+                       </TouchableOpacity>
+                       :
+                       <TouchableOpacity   onPress={()=>this.pressbox()}>
+                       <Image
+
+                       style={{width:30,height:30,marginLeft:wp('30%')}}
+                       source={require('../../images/box4.png')}
+                     />
+ </TouchableOpacity>
+
+                        }
                           {/* <IconBack name="logo-dropbox" size={25} color='white'  style={{fontWeight:'bold',marginLeft:wp('30%')}} />  */}
                       </View>
                       <View>
@@ -154,6 +171,8 @@ class SecondScreen extends Component{
 
                   <View style={{width: '100%'}}>
                    <View >
+                     {this.state.changelist==false?
+                     <View>
                         <FlatList
                               data={titles}
                               renderItem={({ item }) =>
@@ -164,7 +183,29 @@ class SecondScreen extends Component{
                                       onPress={()=>this.goVedio(item.id)} />}
                                       keyExtractor={item => item.id}
                                       numColumns={2}
+                                      key={(this.state.changelist ? true : false)}
                                 />
+
+                     </View>
+                     :
+                     <View >
+                        <FlatList
+                              data={titles}
+                              renderItem={({ item }) =>
+                                      <View style={styles.thumbnail1} >
+                                          <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black",fontWeight:'bold' }}>Place to go</Text>
+                                          <Text style={{ fontSize: 15, marginHorizontal: 30, color: "black" }}>Texts comes here</Text>
+                                      </View>
+                               }
+                                  keyExtractor={item => item.id}
+                                  numColumns={1}
+                                />
+                     </View>
+
+
+                    }
+
+
                      </View>
                   </View>
                </View>

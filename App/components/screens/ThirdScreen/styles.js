@@ -11,7 +11,7 @@ export default EStyleSheet.create({
         flex:1
        
       },
-      thumbnail1: {
+      thumbnail: {
             flex:1,
            margin:5,
            width:wp('20%'),
@@ -22,9 +22,21 @@ export default EStyleSheet.create({
   
 
       },
-      thumbnail: {
-        borderRadius: 10,
-      },
+
+
+      thumbnail1: {
+           
+        paddingBottom:wp('8%'),
+        paddingLeft:wp('0%'),
+        paddingRight:wp('1%'),
+        paddingTop:wp('3%'),
+        marginTop:wp('3%'),
+        backgroundColor:'white',
+        borderRadius:10
+  },
+      // thumbnail: {
+      //   borderRadius: 10,
+      // },
       img:{
         height:wp('30%'),
         width: wp('40%'),

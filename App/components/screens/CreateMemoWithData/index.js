@@ -93,6 +93,26 @@ class LoginScreen extends Component{
   thumbnail_large:require('../../images/2.jpeg')
 },
 ]
+
+
+let titlesbottom = [{
+  value: 'Add Image',
+  lable:'rice',
+  thumbnail_large:require('../../images/image.png')
+}, {
+  value: 'Take Photo',
+  lable:'vade',
+  thumbnail_large:require('../../images/photo.png')
+},
+{
+value: 'Copy Memo',
+lable:'vade',
+thumbnail_large:require('../../images/copy.png')
+},{
+value: 'Delete Memo',
+lable:'vade',
+thumbnail_large:require('../../images/delete.png')
+}]
     
      
         return(
@@ -122,7 +142,7 @@ class LoginScreen extends Component{
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
                       
-                      <View    style={{width:30,height:30,marginLeft:wp('30%')}}>
+                      <View    style={{width:30,height:30,marginLeft:wp('27%')}}>
                     <Text style={{color:'#0ea8e0'}}>Save</Text>
                       </View>
                         
@@ -176,7 +196,7 @@ class LoginScreen extends Component{
                               data={titles}
                              
                               renderItem={({ item }) =>
-                                  <View style={{flexDirection:'row',justifyContent:'space-between',borderWidth:0.25,margin:10,borderRadius:5,borderColor:'#000'}}>
+                                  <View style={{flexDirection:'row',justifyContent:'space-between',borderWidth:0.25,margin:10,borderRadius:5,borderColor:'#C0C0C0'}}>
                                     <View style={{flexDirection:'row'}}>
                                         <View >
                                             <Image
@@ -192,7 +212,7 @@ class LoginScreen extends Component{
                                     </View>
 
                                     <View style={{alignSelf:'center',paddingRight:10}}>
-                                        <IconMore name="close" size={22} color='#777'  /> 
+                                        <IconMore name="close" size={22} color='#C0C0C0'  /> 
                                     </View>
                                   
                                   </View>
@@ -216,10 +236,10 @@ class LoginScreen extends Component{
 
             </ScrollView>
 
-            <ScrollView horizontal={true}  showsHorizontalScrollIndicator={false}
-  pagingEnabled={true} >
-             <View>
-           <TouchableOpacity
+            {/* <ScrollView horizontal={true}  showsHorizontalScrollIndicator={false}
+  pagingEnabled={true} > */}
+             <View style={{margin:10,backgroundColor:'#F5F5F5'}}>
+           {/* <TouchableOpacity
           activeOpacity={0.5}
         // onPress={() => this.props.navigation.navigate('MyCart') } 
        >
@@ -241,11 +261,67 @@ class LoginScreen extends Component{
                 </View>
                
          
+        </TouchableOpacity> */}
+
+<FlatList
+                              data={titlesbottom}
+                              horizontal={true}
+                              renderItem={({ item }) =>
+                                  <View style={{padding:5}}>
+                                    <TouchableOpacity
+          activeOpacity={0.5}
+        // onPress={() => this.props.navigation.navigate('MyCart') } 
+         >
+           
+           <View style={{
+             paddingLeft:10,
+             paddingRight:10,
+             paddigTop:5,
+             marginTop:1,
+             marginRight:0,
+             paddingBottom:4,
+             alignItems:'center',
+             backgroundColor:'#fff',
+              borderColor:'#fff',
+
+              // borderWidth:0,
+              // borderColor:'rgba(0,0,0,0.2)',
+               alignItems:'center',
+               justifyContent:'center',
+              // width:'30%',
+              
+              // bottom:wp('15%'),
+              // right: wp('20%'),
+              height:70,
+              backgroundColor:'#fff',
+              shadowColor: "#000",
+              shadowOffset: {
+                  width: 0,
+                  height: 1,
+              },
+              shadowOpacity: 0.22,
+              shadowRadius: 2.22,
+
+              elevation: 3,
+           }}>
+               <Image
+                      style={{width:wp('7%'),height:wp('5%'),marginTop:5}}
+                      source={item.thumbnail_large}
+                    />
+                     <Text style={{fontSize:wp('3%'),paddingTop:2}}>{item.value}</Text>
+                </View>
+         
         </TouchableOpacity>
+                                  </View>
+                                    
+                                    }
+                                      keyExtractor={item => item.id}
+                                      numColumns={1}
+                                />
              </View>
              
              
-        <TouchableOpacity
+        {/* <TouchableOpacity
           activeOpacity={0.5}
         // onPress={() => this.props.navigation.navigate('MyCart') } 
          >
@@ -312,12 +388,12 @@ class LoginScreen extends Component{
                      <Text style={{fontSize:wp('3%'),paddingTop:2}}>Delete Memo</Text>
                 </View>
          
-        </TouchableOpacity>
+        </TouchableOpacity> */}
              
           
       
         
-        </ScrollView>
+        {/* </ScrollView> */}
 
             </SafeAreaView>
             </LinearGradient>

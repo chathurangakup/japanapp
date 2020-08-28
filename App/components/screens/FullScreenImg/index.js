@@ -102,15 +102,7 @@ class LoginScreen extends Component{
                   style={{width:wp('100%'),height:wp('100%')}}
                   source={require('../../images/3.jpeg')}
                 />
-              
-
-
-               
-
-               
-               
-              
-
+            
            
             </View>
             </View>

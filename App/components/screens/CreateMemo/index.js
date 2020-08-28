@@ -93,7 +93,7 @@ class LoginScreen extends Component{
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
 
-                      <View    style={{width:30,height:30,marginLeft:wp('30%')}}>
+                      <View    style={{width:30,height:30,marginLeft:wp('27%')}}>
                         <TouchableOpacity onPress={()=>this.props.navigation.navigate('CreateMemoWithData')}>
                         <Text style={{color:'#0ea8e0'}}>Save</Text>
                         </TouchableOpacity>

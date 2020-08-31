@@ -274,13 +274,14 @@ thumbnail_large:require('../../images/delete.png')
          >
            
            <View style={{
-             paddingLeft:10,
-             paddingRight:10,
-             paddigTop:5,
+             paddingLeft:wp('4%'),
+             paddingRight:wp('4%'),
+             paddigTop:wp('10%'),
              marginTop:1,
-             marginRight:0,
+             marginRight:13,
              paddingBottom:4,
              alignItems:'center',
+             justifyContent:'center',
              backgroundColor:'#fff',
               borderColor:'#fff',
 
@@ -288,7 +289,7 @@ thumbnail_large:require('../../images/delete.png')
               // borderColor:'rgba(0,0,0,0.2)',
                alignItems:'center',
                justifyContent:'center',
-              // width:'30%',
+               width:'100%',
               
               // bottom:wp('15%'),
               // right: wp('20%'),
@@ -308,7 +309,7 @@ thumbnail_large:require('../../images/delete.png')
                       style={{width:wp('7%'),height:wp('5%'),marginTop:5}}
                       source={item.thumbnail_large}
                     />
-                     <Text style={{fontSize:wp('3%'),paddingTop:2}}>{item.value}</Text>
+                     <Text style={{fontSize:wp('3%'),paddingTop:2,color:'#777',paddingTop:5}}>{item.value}</Text>
                 </View>
          
         </TouchableOpacity>

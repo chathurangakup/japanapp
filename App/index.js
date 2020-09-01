@@ -9,7 +9,7 @@ import {
 import { View,Text} from 'react-native';
 
 
- import Home_Resturant from './components/screens/FullScreenImg';
+ import Home_Resturant from './components/screens/Notification';
  import Navigators from './components/navigators/Appnavigators';
 
  import FirstScreen from '././components/screens/ForthScreen';

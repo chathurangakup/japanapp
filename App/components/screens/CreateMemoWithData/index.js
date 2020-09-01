@@ -129,7 +129,7 @@ thumbnail_large:require('../../images/delete.png')
              
 
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                    <View style={{flexDirection:'row',flex:1,justifyContent:'flex-start',padding:10}}>
+                    <View style={{flexDirection:'row',flex:1,padding:10}}>
                       <View >
                       <Image
                                 style={{width:30,height:30}}
@@ -141,10 +141,11 @@ thumbnail_large:require('../../images/delete.png')
                         
                     </View>
                     <View style={{flexDirection:'row',flex:1,padding:10}}>
-                      
+                      <TouchableOpacity onPress={()=>this.props.navigation.navigate('Notification')}>
                       <View    style={{width:30,height:30,marginLeft:wp('27%')}}>
-                    <Text style={{color:'#0ea8e0'}}>Save</Text>
+                          <Text style={{color:'#0ea8e0'}}>Save</Text>
                       </View>
+                      </TouchableOpacity>
                         
                     </View>
                    </View>

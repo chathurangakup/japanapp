@@ -22,6 +22,7 @@ import AnythingCurious from '../screens/AnythingCurious';
 import CreateMemo from '../screens/CreateMemo';
 import CreateMemoWithData from '../screens/CreateMemoWithData';
 import FullScreenImg from '../screens/FullScreenImg';
+import Notification from '../screens/Notification';
 
 
 
@@ -94,6 +95,15 @@ AnythingCurious: {
   }, 
   FullScreenImg: {
     screen: FullScreenImg,
+    navigationOptions:{
+        header:()=> null,
+    },
+    navigatorStyle: {
+        navBarHidden: true
+    }
+  }, 
+  Notification: {
+    screen: Notification,
     navigationOptions:{
         header:()=> null,
     },
